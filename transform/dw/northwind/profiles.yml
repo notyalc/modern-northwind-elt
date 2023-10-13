@@ -1,0 +1,13 @@
+adv_works:
+  outputs:
+    dev:
+      type: snowflake
+      threads: 1
+      account: <YOUR_ACCOUNT_ID>
+      user: dbt
+      password: ddbt
+      role:  DBT_RW
+      warehouse:  ETL
+      database: HR
+      schema: RAW
+  target: dev

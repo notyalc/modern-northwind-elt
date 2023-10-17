@@ -1,13 +1,13 @@
-adv_works:
+northwind:
   outputs:
     dev:
       type: snowflake
       threads: 1
-      account: <YOUR_ACCOUNT_ID>
+      account: RCB74488
       user: dbt
       password: ddbt
       role:  DBT_RW
       warehouse:  ETL
-      database: HR
+      database: NORTHWIND
       schema: RAW
   target: dev

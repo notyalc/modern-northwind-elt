@@ -1,20 +1,306 @@
 version: 2
 sources:
-  - name: northwind
-    database: northwind  
-    schema: raw
+  - name: raw
     tables:
+
       - name: categories
-      - name: products
-      - name: suppliers
-      - name: order_details
-      - name: orders
+        description: ''
+        columns:
+          - name: category_id
+            description: ''
+          - name: category_name
+            description: ''
+          - name: description
+            description: ''
+          - name: picture
+            description: ''
+
       - name: customers
-      - name: customer_customer_demo
-      - name: customer_demographics
+        description: ''
+        columns:
+          - name: customer_id
+            description: ''
+            tests:
+              - unique
+              - not_null
+          - name: address
+            description: ''
+          - name: city
+            description: ''
+          - name: company_name
+            description: ''
+          - name: contact_name
+            description: ''
+          - name: contact_title
+            description: ''
+          - name: country
+            description: ''
+          - name: fax
+            description: ''
+          - name: phone
+            description: ''
+          - name: postal_code
+            description: ''
+          - name: region
+            description: ''
+
       - name: employees
-      - name: employee_territories
-      - name: territories
-      - name: region
+        description: ''
+        columns:
+          - name: employee_id
+            description: ''
+            tests:
+              - unique
+              - not_null
+          - name: address
+            description: ''
+            
+          - name: birth_date
+            description: ''
+            
+          - name: city
+            description: ''
+            
+          - name: country
+            description: ''
+            
+          - name: extension
+            description: ''
+            
+          - name: first_name 
+            description: ''
+            
+          - name: hire_date
+            description: ''
+            
+          - name: home_phone
+            description: ''
+            
+          - name: last_name
+            description: ''
+            
+          - name: notes
+            description: ''
+            
+          - name: photo
+            description: ''
+            
+          - name: photo_path 
+            description: ''
+            
+          - name: postal_code
+            description: ''
+            
+          - name: region
+            description: ''
+            
+          - name: reports_to
+            description: ''
+            
+          - name: title
+            description: ''
+            
+          - name: title_of_courtesy
+            description: ''
+            
+      
+      - name: orders
+        description: ''
+        columns:
+          - name: order_id
+            description: ''
+            tests:
+              - unique
+              - not_null
+          - name: customer_id
+            description: ''
+            
+          - name: employee_id
+            description: ''
+              
+          - name: required_date
+            description: ''
+            
+          - name: shipped_date
+            description: ''
+            
+          - name: ship_address
+            description: ''
+            
+          - name: ship_city
+            description: ''
+            
+          - name: ship_country
+            description: ''
+            
+          - name: ship_name
+            description: ''
+            
+          - name: ship_postal_code
+            description: ''
+            
+          - name: ship_region
+            description: ''
+            
+          - name: ship_via
+            description: ''
+            
+          
+
+      - name: order_details
+        description: ''
+        columns:
+          - name: order_id
+            description: ''
+            tests:
+              - not_null
+          - name: product_id
+            description: ''
+            
+          - name: quantity
+            description: ''
+            
+          - name: unit_price
+            description: ''
+             
+          - name: discount
+            description: ''
+             
+
+      - name: products
+        description: ''
+        columns:
+          - name: product_id
+            description: ''
+            tests:
+              - unique
+              - not_null
+          - name: category_id
+            description: ''
+            
+          - name: product_name
+            description: ''
+            
+          - name: quantity_per_unit
+            description: ''
+            
+          - name: discontinued
+            description: ''
+            
+          - name: reorder_level
+            description: ''
+            
+          - name: supplier_id
+            description: ''
+            
+          - name: units_in_stock
+            description: ''
+            
+          - name: units_on_order
+            description: ''
+            
+          - name: unit_price
+            description: ''
+            
+
       - name: shippers
+        description: ''
+        columns:
+          - name: shipper_id
+            description: ''
+            tests:
+              - unique
+              - not_null
+          - name: company_name
+            description: ''
+            
+          - name: phone
+            description: ''
+            
+
+
+      - name: suppliers
+        description: ''
+        columns:
+          - name: supplier_id
+            description: ''
+            tests:
+              - unique
+              - not_null
+          - name: region
+            description: ''
+            
+          - name: postal_code
+            description: ''
+            
+          - name: address
+            description: ''
+            
+          - name: city
+            description: ''
+            
+          - name: company_name
+            description: ''
+            
+          - name: contact_name
+            description: ''
+            
+          - name: contact_title
+            description: ''
+            
+          - name: country
+            description: ''
+            
+          - name: fax
+            description: ''
+            
+          - name: homepage
+            description: ''
+            
+          - name: phone
+            description: ''
+            
+
+      - name: territories
+        description: ''
+        columns:
+          - name: territory_id
+            description: ''
+            tests:
+              - unique
+              - not_null
+          - name: region_id
+            description: ''
+            
+          - name: territory_description
+            description: ''
+            
+
       - name: us_states
+        description: ''
+        columns:
+          - name: state_id
+            description: ''
+            tests:
+              - unique
+              - not_null
+          - name: state_name
+            description: ''
+            
+          - name: state_abbr
+            description: ''
+            
+          - name: state_region
+            description: ''
+            
+
+
+      - name: employee_territories
+        description: ''
+        columns:
+          - name: employee_id
+            description: ''
+            
+          - name: territories_id
+            description: ''
+            

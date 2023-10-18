@@ -32,9 +32,9 @@ with stg_order as (
   )
 
 select 
-    {{  dbt_utils.generate_surrogate_key(['product_id']) }} as product_key
-    , {{  dbt_utils.generate_surrogate_key(['customer_id']) }} as customer_key
-    , {{  dbt_utils.generate_surrogate_key(['employee_id']) }} as trader_key
+    {{  dbt_utils.generate_surrogate_key(['product_id']) }} as product_id_key
+    , {{  dbt_utils.generate_surrogate_key(['customer_id']) }} as customer_id_key
+    , {{  dbt_utils.generate_surrogate_key(['employee_id']) }} as employee_id_key
     , "order_id"
     , "customer_id"
     , "employee_id"

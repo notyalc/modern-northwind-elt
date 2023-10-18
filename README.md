@@ -22,7 +22,7 @@ Before using this ETL pipeline, ensure you have the following prerequisites:
 ## Setup
 
 1. **Setting up Snowflake**:
-   - Create a Snowflake database and configure your connection details. Make note of your Snowflake account URL, username, and password.
+   - Create a Snowflake database and configure your connection details. Make note of your Snowflake account URL, username, and password. Create the necessary roles and grants for an account that can read/write in the databse you are working in. 
 
 2. **Setting up Airbyte**:
    - Install Airbyte and configure connections for both the source (RDS Postgres) and destination (Snowflake). Use the Snowflake connection details you prepared earlier.
@@ -37,10 +37,10 @@ Before using this ETL pipeline, ensure you have the following prerequisites:
 ## Usage
 
 1. **Ingest Data with Airbyte**:
-   - Run Airbyte to ingest data from the RDS Postgres instance into Snowflake.
+   - Airbyte to ingest data from the RDS Postgres instance into Snowflake every 24 hours.
 
 2. **Transform Data with dbt**:
-   - Use dbt to transform the data and create models in Snowflake.
+   - Use command `docker build -t (image_name) -f docker/Dockerfile .` followed by `docker run --env-file docker/dbt.env dbtbuild` to transform the data and create models in Snowflake.
 
 3. **Serve Models with Preset**:
    - Start Preset to serve your dbt models and create dashboards.

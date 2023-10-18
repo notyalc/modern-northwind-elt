@@ -1,0 +1,30 @@
+version: 2
+
+
+models:
+ - name: dim_customer
+   columns:
+     - name: customer_id_key
+       tests:
+       - not_null
+       - unique
+       description: The surrogate key of the customer
+
+     - name: customer_id
+       tests:
+       - not_null
+       - unique
+       description: The natural key of the customer
+        
+     - name: customer_address
+     - name: customer_city
+     - name: customer_company_name
+     - name: customer_contact_name
+     - name: customer_contact_title
+     - name: customer_country
+     - name: customer_fax_number
+     - name: customer_phone_number
+     - name: customer_zip_code
+
+
+

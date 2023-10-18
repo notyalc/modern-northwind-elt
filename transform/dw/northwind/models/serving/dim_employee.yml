@@ -1,0 +1,44 @@
+version: 2
+
+
+models:
+ - name: dim_employee
+   columns:
+     - name: employee_id_key
+       tests:
+       - not_null
+       - unique
+       description: The surrogate key of the employee
+
+
+     - name: employee_id
+       tests:
+       - not_null
+       - unique
+       description: The natural key of the employee
+        
+     - name: employee_fullname
+       tests:
+       - not_null
+       description: The full name of the employee
+
+
+     - name: employee_birth_date
+     - name: employee_city
+     - name: employee_country
+     - name: employee_extension
+     - name: employee_hire_date
+     - name: employee_home_phone
+     - name: employee_notes
+     - name: employee_photo
+     - name: employee_photo_path
+     - name: employee_postal_code
+     - name: employee_region
+     - name: employee_reports     
+     - name: employee_title
+     - name: employee_title_of_courtesy
+     - name: employee_territory_id
+     - name: employee_territory_description
+     - name: employee_region_id
+     - name: territory_id
+

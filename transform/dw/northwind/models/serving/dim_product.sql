@@ -10,7 +10,7 @@ with stg_products as (
 
 , transformed as (
     select 
-        {{ dbt_utils.generate_surrogate_key(['stg_products.product_id']) }} as product_key -- surrogate key
+        {{ dbt_utils.generate_surrogate_key(['stg_products.product_id']) }} as product_id_key -- surrogate key
         , stg_products.product_id -- natural key of original table  
         , stg_products.category_id as product_category_id
         , stg_products.product_name

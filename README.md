@@ -12,6 +12,7 @@ This project demonstrates an ETL (Extract, Transform, Load) pipeline that takes 
 - [Usage](#usage)
   
 ## Solution Architecture
+![images/solution_architecture.png](images/solution_architecture.png)
 
 ## Prerequisites
 

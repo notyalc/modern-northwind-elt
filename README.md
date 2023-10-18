@@ -9,9 +9,6 @@ This project demonstrates an ETL (Extract, Transform, Load) pipeline that takes 
 - [Prerequisites](#prerequisites)
 - [Setup](#setup)
 - [Usage](#usage)
-- [Folder Structure](#folder-structure)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Prerequisites
 
@@ -47,22 +44,3 @@ Before using this ETL pipeline, ensure you have the following prerequisites:
 
 3. **Serve Models with Preset**:
    - Start Preset to serve your dbt models and create dashboards.
-
-## Folder Structure
-
-- `/airbyte` - Configuration files for Airbyte.
-- `/dbt` - Contains the dbt project files, including models, transformations, and SQL scripts.
-- `/preset` - Configuration files for Preset.
-- `/scripts` - Useful scripts and utilities for the ETL process.
-
-## Contributing
-
-If you want to contribute to this project or report issues, please follow our [contribution guidelines](CONTRIBUTING.md).
-
-## License
-
-This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute it as per the terms of the license.
-
----
-
-Feel free to modify and expand upon this README to suit the specific details of your project. Remember to provide clear instructions and explanations for potential collaborators and users.

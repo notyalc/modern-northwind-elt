@@ -1,3 +1,5 @@
+# Snowflake role grants
+user_role_grants.sql
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

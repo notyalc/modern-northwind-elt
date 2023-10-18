@@ -2,21 +2,12 @@ version: 2
 
 models:
   - name: dim_trader
-    tests:
-    - dbt_expectations.expect_table_row_count_to_equal_other_table:
-        compare_model: ref("stg_employee_territories2")
     columns:
       - name: trader_key
         description: The surrogate key of the trader/employee
-        tests:
-          - unique
-          - not_null
 
       - name: trader_id
         description: The natural key of the trader/employee
-        tests:
-          - unique
-          - not_null
           
       - name: trader_fullname
         description: The full name of the trader

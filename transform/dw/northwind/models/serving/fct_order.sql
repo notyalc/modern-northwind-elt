@@ -35,21 +35,21 @@ select
     {{  dbt_utils.generate_surrogate_key(['product_id']) }} as product_key
     , {{  dbt_utils.generate_surrogate_key(['customer_id']) }} as customer_key
     , {{  dbt_utils.generate_surrogate_key(['employee_id']) }} as trader_key
-    , order_id
-    , customer_id
-    , employee_id
-    , required_date
-    , shipped_date
-    , ship_address
-    , ship_city
-    , ship_country
-    , ship_name
-    , ship_postal_code
-    , ship_region
-    , ship_via
-    , product_id as order_product_id
-    , quantity
-    , unit_price
-    , discount
-    , quantity * unit_price * (1 - discount) as value
+    , "order_id"
+    , "customer_id"
+    , "employee_id"
+    , "required_date"
+    , "shipped_date"
+    , "ship_address"
+    , "ship_city"
+    , "ship_country"
+    , "ship_name"
+    , "ship_postal_code"
+    , "ship_region"
+    , "ship_via"
+    , "product_id" as "order_product_id"
+    , "quantity"
+    , "unit_price"
+    , "discount"
+    , CAST(quantity AS int) * CAST(unit_price AS int) * (1 - CAST(discount AS float)) AS value
 from transformed

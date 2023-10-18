@@ -28,7 +28,7 @@ with stg_employees as (
 
 , stg_employee_territories as (
     select * 
-    from {{ ref('stg_employee_territories2')}}
+    from {{ ref('stg_employee_territories')}}
 )
 
 , transformed as (

@@ -1,7 +1,15 @@
+{{
+    config(
+        materialized='table',
+        database='northwind',
+        schema='staging'
+    )
+}}
+
 with source_data as (
     select
-        employee_id
-        , territory_id
+        "employee_id"
+        , "territory_id"
     from {{ source('raw', 'employee_territories') }}
 )
 select *
